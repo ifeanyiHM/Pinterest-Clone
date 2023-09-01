@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pinterest clone</title>
+  </head>
+  <body>
+    <header id="header__section">
+      <div class="desktop">
+        <ul>
+          <li class="logo"><i class="fa-brands fa-pinterest"></i></li>
+          <li class="home">Home</li>
+          <li class="create">
+            <div>
+              <span>Create</span>
+              <i class="fa-solid fa-angle-down"></i>
+            </div>
+          </li>
+          <li class="search__form">
+            <form action="" class="search__input search__input--desktop">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input class="input__header" type="text" placeholder="Search" />
+              <i class="fa-solid fa-xmark exit__input"></i>
+            </form>
+          </li>
+          <li>
+            <i class="fa-solid fa-bell notif" data-after-content="10"></i>
+          </li>
+          <li>
+            <i
+              class="fa-solid fa-comment-dots notif"
+              data-after-content="10"
+            ></i>
+          </li>
+          <li class="profile">|</li>
+          <i class="fa-solid fa-angle-down"></i>
+        </ul>
+        <div class="search__sect">
+          <div class="search__container">
+            <p class="search__title">Popular on Pinterest</p>
+            <div class="search__option">
+              <!-- <div class="img__result">
+                <img src="https://source.unsplash.com/random/exercise" alt="" />
+                <span>word loves you</span>
+              </div>
+               -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mobile">
+        <ul>
+          <li class="focus">For you</li>
+          <li>Men's Health Fitness</li>
+          <li>Health</li>
+          <li>Books</li>
+          <li>Fitness and exercise</li>
+          <li>Aloe vera</li>
+        </ul>
+      </div>
+    </header>
+    <main id="main__section">
+      <div class="image__container">
+        <!-- <div class="spinner">
+        </div> -->
+        <!-- <div class="img--modal__mobile">
+        </div> -->
+        <!-- <div class="image__result">
+          <div class="img__desc desc"></div>
+          <div class="overlay expand__image"></div>
+        </div> -->
+      </div>
+      <section class="search__section">
+        <form class="search__input search__input--mobile" action="">
+          <i class="fa-solid fa-magnifying-glass footer__icon"></i>
+          <input class="input__cont" type="text" placeholder="Search" />
+          <span class="cancel">Cancel</span>
+        </form>
+        <p class="search__title">Popular on Pinterest</p>
+        <div class="search__option search__option--mobile">
+          <!-- <div class="img__result">
+          </div> -->
+        </div>
+      </section>
+    </main>
+    <!-- <section id="error__message">
+    </section> -->
+    <footer id="footer__section">
+      <div class="container cont">
+        <i class="fa-solid fa-house current footer__icon home"></i>
+        <i class="fa-solid fa-magnifying-glass footer__icon search"></i>
+        <i class="fa-solid fa-comment-dots footer__icon message"></i>
+        <i class="fa-solid fa-bookmark footer__icon bookmark"></i>
+      </div>
+    </footer>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
