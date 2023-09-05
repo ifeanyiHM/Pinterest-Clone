@@ -12,7 +12,7 @@ Welcome to the Pinterest Clone App! This app is designed to provide you with an 
 3. **Infinite Scrolling**: Whether you're exploring random images or conducting a search, the app supports infinite scrolling. There's no limit to the number of images you can discover and save.
 
 ## Website Link
-You can visit the app on: GitHub Link.
+You can visit the app on: https://interest-gamma.vercel.app/
 
 ## How to Use
 
