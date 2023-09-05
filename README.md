@@ -1,4 +1,3 @@
-Certainly! Here's the description in a README format:
 
 # Pinterest Clone App
 
