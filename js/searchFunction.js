@@ -65,10 +65,35 @@ afterContent.forEach((el) => {
   el.setAttribute("data-after-content", random);
 });
 
+//Listen for event when the question mark icon on the bottom right of the page is clicked
+const inquireFunc = () => {
+  const inquiry = document.querySelectorAll(".center");
+  const question = document.querySelector(".question");
+  const quest = document.querySelector(".quest");
+
+  const inquiryFunc = () => {
+    inquiry.forEach((inquire) => {
+      inquire.style.background = "none";
+    });
+  };
+
+  inquiry.forEach((focusedInq) => {
+    focusedInq.addEventListener("mouseover", () => {
+      inquiryFunc();
+      focusedInq.style.background = "#e4dfdf";
+    });
+  });
+
+  question.addEventListener("click", () => {
+    quest.classList.toggle("opac");
+  });
+};
+
 export {
   displaySearchOptions,
   inputCont,
   searchSection,
   inputHeader,
   searchSect,
+  inquireFunc,
 };

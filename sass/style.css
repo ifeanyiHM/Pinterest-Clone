@@ -89,6 +89,9 @@ body #main__section .image__container .spinner .cont span {
     transform: rotate(360deg);
   }
 }
+body #main__section .image__container .question {
+  display: none;
+}
 body #main__section .image__container .image__result {
   margin-bottom: 2.2rem;
   position: relative;
@@ -393,7 +396,7 @@ body #error__message {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 50;
+  z-index: 999;
   background: var(--primary-color);
 }
 body #error__message i {
@@ -507,8 +510,11 @@ body #footer__section .container .current {
   body #header__section .desktop ul .create {
     border: 5px solid transparent;
     border-radius: 50px;
-    padding: 1rem 1.1rem;
+    padding: 0.8rem 0.9rem;
     transition: all 0.2s;
+    color: #000;
+    font-size: 0.9rem;
+    white-space: nowrap;
   }
   body #header__section .desktop ul .create i {
     color: var(--font-color);
@@ -562,8 +568,14 @@ body #footer__section .container .current {
   body #header__section .desktop ul li .fa-bell,
   body #header__section .desktop ul li .fa-comment-dots {
     font-size: 1.4rem;
-    margin: 0 0.5rem;
     position: relative;
+    padding: 0.8rem;
+    border-radius: 40px;
+    transition: all 0.3s;
+  }
+  body #header__section .desktop ul li .fa-bell:hover,
+  body #header__section .desktop ul li .fa-comment-dots:hover {
+    background: #e0dbdb;
   }
   body #header__section .desktop ul li .fa-bell::after,
   body #header__section .desktop ul li .fa-comment-dots::after {
@@ -572,8 +584,8 @@ body #footer__section .container .current {
     display: flex;
     justify-content: center;
     align-items: center;
-    top: -9px;
-    right: 3px;
+    top: 5px;
+    right: 17px;
     width: 1.1rem;
     height: 1.1rem;
     background: rgb(215, 11, 11);
@@ -583,10 +595,37 @@ body #footer__section .container .current {
     color: var(--primary-color);
     font-size: 0.5rem;
   }
+  body #header__section .desktop ul .hovert {
+    position: relative;
+  }
+  body #header__section .desktop ul .hovert span {
+    position: absolute;
+    bottom: -2rem;
+    left: -20%;
+    font-size: 0.7rem;
+    padding: 0.5rem;
+    background: var(--font-color);
+    color: var(--primary-color);
+    border-radius: 10px;
+    transition: all 0.3s;
+    opacity: 0;
+  }
+  body #header__section .desktop ul .hovert:hover span {
+    opacity: 1;
+  }
   body #header__section .desktop ul .profile {
     background: #e0dbdb;
     padding: 0.2rem 0.7rem 0.3rem 0.7rem;
     border-radius: 100%;
+    margin: 0.4rem 0.9rem;
+    transition: all 0.3s;
+  }
+  body #header__section .desktop ul .profile:hover {
+    padding: 0.6rem 1.1rem 0.7rem 1.1rem;
+    border-radius: 40px;
+    margin: 0 0.5rem;
+  }
+  body #header__section .desktop ul .fa-angle-down {
     margin: 0 0.5rem;
   }
   body #header__section .desktop .search__sect {
@@ -649,8 +688,101 @@ body #footer__section .container .current {
     width: 6px;
     height: 6px;
   }
+  body #main__section .image__container .question {
+    display: block;
+  }
+  body #main__section .image__container .question .fa-question {
+    background: var(--primary-color);
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.1), 1px 1px 7px rgba(0, 0, 0, 0.1) inset;
+    padding: 1.1rem 1.3rem;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    z-index: 900;
+    cursor: pointer;
+    transition: all 0.4s;
+  }
+  body #main__section .image__container .question .fa-question:hover {
+    background: #f7f7f7;
+  }
+  body #main__section .image__container .question .spant {
+    background: var(--font-color);
+    color: var(--primary-color);
+    padding: 0.5rem;
+    border-radius: 10px;
+    position: fixed;
+    right: 6.2rem;
+    bottom: 2.9rem;
+    z-index: 999;
+    font-size: 0.7rem;
+    opacity: 0;
+    transition: all 0.4s 0.5s;
+  }
+  body #main__section .image__container .question:hover .spant {
+    opacity: 1;
+  }
+  body #main__section .image__container .question .quest {
+    position: fixed;
+    right: 6.2rem;
+    bottom: 2rem;
+    z-index: 999;
+    width: 23rem;
+    background: var(--primary-color);
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.4s;
+  }
+  body #main__section .image__container .question .quest .quest__ti {
+    padding: 0.5rem;
+  }
+  body #main__section .image__container .question .quest .quest__ti .center {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    color: var(--font-color);
+    transition: all 0.4s;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  body #main__section .image__container .question .quest .quest__ti .center i {
+    transform: rotate(-45deg);
+    font-size: 0.7rem;
+  }
+  body #main__section .image__container .question .quest .quest__ti .center:first-child {
+    background: #e4dfdf;
+  }
+  body #main__section .image__container .question .quest .line {
+    width: 100%;
+    height: 1px;
+    background: #d0cccc;
+  }
+  body #main__section .image__container .question .quest .misc {
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  body #main__section .image__container .question .quest .misc span {
+    display: inline-block;
+    margin: 0 0.5rem 0.5rem 0;
+    font-weight: bold;
+    color: #7b7474;
+    transition: all 0.4s;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+  }
+  body #main__section .image__container .question .quest .misc span:hover {
+    border-bottom: 1px solid #7b7474;
+  }
+  body #main__section .image__container .question .opac {
+    opacity: 1;
+    transition: all 0.4s;
+  }
   body #main__section .image__container .image__result {
     margin-bottom: 1rem;
+    position: relative;
   }
   body #main__section .image__container .image__result .img__desc {
     display: none;

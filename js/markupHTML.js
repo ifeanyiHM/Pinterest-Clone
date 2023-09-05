@@ -24,6 +24,41 @@ const generateImageModal = () => {
   imgContainer.insertAdjacentHTML("beforeend", modal);
 };
 
+const generateInquiry = () => {
+  const inquiry = `
+    <div class="question">
+      <i class="fa-solid fa-question"></i>
+      <span class="spant">More</span>
+      <div class="quest">
+        <div class="quest__ti">
+          <div class="center">
+            <span>Visit the Help Center</span>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          </div>
+          <div class="center">
+            <span>Create widget</span>
+            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          </div>
+        </div>
+        <div class="line"></div>
+        <div class="misc">
+          <span>About</span>
+          <span>Blog</span>
+          <span>Businesses</span>
+          <span>Careers</span>
+          <span>Developers</span>
+          <span>Removals</span>
+          <span>Privacy Policy</span>
+          <span>Personalized Ads</span>
+          <span>Your Privacy Rights</span>
+          <span>Terms</span>
+        </div>
+      </div>
+    </div>
+  `;
+  imgContainer.insertAdjacentHTML("beforeend", inquiry);
+};
+
 const generateHTML = (result) => {
   return `
       <div class="image__result">
@@ -38,17 +73,17 @@ const generateHTML = (result) => {
           <span></span>
         </div>
         <div class="overlay">
-          <span class="save">Save</span>
+          <span class="save pass">Save</span>
           <div class="link">
-            <a href="${result.links.download}" target="_blank">
+            <a href="${result.links.download}" class="pass" target="_blank">
               <i class="fa-solid fa-arrow-up"></i>
               unsplash.com
             </a>
             <div class="img__download">
-              <a href="${result.links.html}" target="_blank" download>
+              <a href="${result.links.html}" class="pass" target="_blank" download>
                 <i class="fa-solid fa-arrow-up-from-bracket"></i>
               </a>
-              <div class="img__des">
+              <div class="img__des pass">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -165,6 +200,7 @@ const renderLoading = (el) => {
 
 export {
   generateImageModal,
+  generateInquiry,
   generateHTML,
   generateMarkup,
   generateErrorMessage,

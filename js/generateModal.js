@@ -67,6 +67,8 @@ export default (container) => {
   const overlay = document.querySelectorAll(".overlay");
   overlay.forEach((item) => {
     item.addEventListener("click", (e) => {
+      const clicked = e.target.closest(".pass");
+      if (clicked) return;
       const expandClosest = e.target.parentElement.firstElementChild.src;
       imgModalMobile.classList.add("expose");
       if (MediaQuery.matches) imgContainer.style.paddingTop = "105vh";
