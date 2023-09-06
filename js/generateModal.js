@@ -1,7 +1,6 @@
 import { imgContainer } from "./markupHTML.js";
 
 export default (container) => {
-  const imgModal = document.querySelector(".img__modal");
   const imgResult = document.querySelectorAll(".expand__image");
   const imgResverse = document.querySelectorAll(".unexpand__image");
   const modalImage = document.querySelector(".modal__image");
@@ -40,17 +39,40 @@ export default (container) => {
     updateStyles("absolute", "center", "0", "flex", "inline", "block");
   };
 
+  // container.addEventListener("click", function (e) {
+  //   const clicked = e.target.closest(".desc");
+  //   const unclicked = e.target.closest(".exit__modal");
+
+  //   if (imgModal) {
+  //     clicked && imgModal.classList.add("expose");
+  //     unclicked && imgModal.classList.remove("expose");
+  //     clicked && clicked.classList.contains("img__descc")
+  //       ? nonDisplayFunc()
+  //       : null;
+  //   }
+  // });
+
+  const igModal = document.querySelector(".img__modal");
   container.addEventListener("click", function (e) {
     const clicked = e.target.closest(".desc");
-    const unclicked = e.target.closest(".exit__modal");
-
-    if (imgModal) {
-      clicked && imgModal.classList.add("expose");
-      unclicked && imgModal.classList.remove("expose");
-      clicked && clicked.classList.contains("img__descc")
-        ? nonDisplayFunc()
-        : null;
+    const checkedd = e.target.closest(".img__descc");
+    if (clicked) {
+      const imgModal = clicked.nextElementSibling.nextElementSibling;
+      imgModal && clicked && imgModal.classList.add("expose");
     }
+
+    if (checkedd) {
+      igModal.classList.add("expose");
+      nonDisplayFunc();
+    }
+  });
+
+  const exitMode = document.querySelectorAll(".exit__modal");
+  exitMode.forEach((exit) => {
+    exit.addEventListener("click", (e) => {
+      const imgModal = e.target.parentElement.parentElement.parentElement;
+      exit && imgModal.classList.remove("expose");
+    });
   });
 
   const MediaQuery = window.matchMedia("(min-width: 1050px)");

@@ -8,7 +8,7 @@ const generateImageModal = () => {
       <div class="img__nav--t">
         <i class="fa-solid fa-angle-left unexpand__image"></i>
         <i class="fa-solid fa-arrow-left unexpand__image"></i>
-        <div class="desc img__descc">
+        <div class="img__descc">
           <span></span>
           <span></span>
           <span></span>
@@ -134,11 +134,12 @@ const generateHTML = (result) => {
               <p class="non__display">
                 <i class="fa-solid fa-thumbtack"></i>Save
               </p>
-              <p><i class="fa-solid fa-arrow-up"></i>Open in app</p>
-              <p>
-                <i class="fa-solid fa-arrow-up-from-bracket"></i>Download
-                image
-              </p>
+              <a href="${result.links.download}" target="_blank">
+                <i class="fa-solid fa-arrow-up"></i>Open in app
+              </a>
+              <a href="${result.links.html}" target="_blank">
+                <i class="fa-solid fa-arrow-up-from-bracket"></i>Download image
+              </a>
               <p class="non__display">
                 <i class="fa-solid fa-xmark"></i>Hide
               </p>
