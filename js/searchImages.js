@@ -29,6 +29,7 @@ const searchImages = async (inputValue, containerElement) => {
   } catch (err) {
     console.log(err);
     generateErrorMessage();
+    document.body.style.overflow = "hidden";
   }
   page++;
 };

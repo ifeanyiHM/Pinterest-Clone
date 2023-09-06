@@ -31,11 +31,9 @@ const randomImagesDisplay = async () => {
   } catch (err) {
     console.log(err);
     generateErrorMessage();
+    document.body.style.overflow = "hidden";
   }
 };
-//   for (let i = 0; i < 2; i++) {
-//     randomImagesDisplay();
-//   }
 
 const displaySearch = async () => {
   const url = `https://api.unsplash.com/photos/random?count=6&client_id=${accessKey}`;
@@ -43,6 +41,5 @@ const displaySearch = async () => {
     fetchAndDisplay(url, option, generateMarkup);
   });
 };
-//displaySearch();
 
 export { randomImagesDisplay, displaySearch, accessKey };
