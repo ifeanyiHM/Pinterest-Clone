@@ -7,7 +7,6 @@
 
 :root {
   --primary-color: #fff;
-  --secondary-color: #f83e7c;
 
   --font-color: #111111;
   --font-color2: #5f5f5f;
@@ -107,7 +106,7 @@ body {
       .image__result {
         margin-bottom: 2.2rem;
         position: relative;
-        //columns: 1;
+        break-inside: avoid;
 
         img {
           max-width: 100%;
